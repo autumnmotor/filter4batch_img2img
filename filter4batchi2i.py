@@ -28,7 +28,7 @@ if torch.cuda.is_available():
 parser = argparse.ArgumentParser(description='Temporal causal filter for Sequencial Images')
 parser.add_argument('--inputdir', default="/Volumes/SSD/macstudio/batch_i2i_output")
 parser.add_argument('--outputdir',default="/Volumes/SSD/macstudio/batch_i2i_fx")
-parser.add_argument('--deflicker_times',type=int,default=1)
+parser.add_argument('--flicker_times',type=int,default=1)
 parser.add_argument('--deblur_times',type=int,default=1)
 parser.add_argument('--model', dest='modelDir', type=str, default='train_log', help='directory with trained model files')
 
@@ -102,7 +102,7 @@ for imgfile in imgfilelist:
 
     # biquad like process
     z_in_img=intp(z_1_in,z_2_in,0)
-    mid_img=intp(img,z_in_img,args.deflicker_times) # shallow low pass filter(deflicker)
+    mid_img=intp(img,z_in_img,args.flicker_times) # shallow low pass filter(deflicker)
 
 #    z_out_img=intp(z_1_out,z_2_out,0)
     z_out_img=intp(z_1_out,None,0)
