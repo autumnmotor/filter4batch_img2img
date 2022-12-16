@@ -1,5 +1,13 @@
 # webuiのbatchimg2imgのための時間軸的因果付与フィルター
 
+## 例
+
+i2i出力そのまま（フィルターなし）→i2i出力をフィルターにかけたもの
+
+![i2i_output（フィルターなし）](https://user-images.githubusercontent.com/59357372/208203936-c2fb1ef4-ce17-445e-a40c-48a0ac2caf23.gif)
+![fx](https://user-images.githubusercontent.com/59357372/208204113-eea27149-a065-4d3f-a4ff-f0be1e17e0bb.gif)
+
+
 ## 説明
 https://github.com/AUTOMATIC1111/stable-diffusion-webui
 
